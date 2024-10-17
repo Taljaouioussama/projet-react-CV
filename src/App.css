@@ -1,38 +1,207 @@
-.App {
+/* Style global */
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', Arial, sans-serif; /* Changement de police */
+  background-color: #f4f4f4; /* Couleur de fond légèrement plus claire */
+  color: #444; /* Couleur du texte */
+}
+
+/* Centrer le formulaire et définir la largeur maximale */
+form {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px; /* Plus d'espace intérieur */
+  background-color: #fff; /* Fond blanc pour le formulaire */
+  border-radius: 12px; /* Coins arrondis */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée */
+}
+
+/* Styliser les champs de texte et les labels */
+label {
+  display: block;
+  margin-bottom: 8px; /* Plus d'espace sous le label */
+  font-weight: bold;
+  color: #555; /* Couleur du texte plus claire */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+input[type="file"] {
+  width: 100%;
+  padding: 12px; /* Plus de padding */
+  margin-bottom: 20px; /* Espacement entre les champs */
+  border: 1px solid #bbb; /* Bordure grise plus douce */
+  border-radius: 6px; /* Coins arrondis */
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* Styliser les textarea */
+textarea {
+  height: 100px; /* Hauteur ajustée */
+  resize: vertical; /* Permet le redimensionnement vertical */
+}
+
+/* Styliser le bouton de soumission */
+button[type="submit"] {
+  width: 100%;
+  padding: 14px; /* Plus de padding pour le bouton */
+  background-color: #283da7; /* Couleur verte plus vive */
+  color: white;
+  border: none;
+  border-radius: 6px; /* Coins arrondis */
+  font-size: 18px; /* Taille de la police augmentée */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s; /* Animation pour le survol */
+}
+
+button[type="submit"]:hover {
+  background-color: #218838; /* Couleur au survol */
+  transform: translateY(-2px); /* Effet de survol */
+}
+
+/* Améliorer l'apparence générale des champs au focus */
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #28a745; /* Bordure verte au focus */
+  box-shadow: 0 0 8px rgba(40, 167, 69, 0.3); /* Ombre verte au focus */
+}
+
+/* Espacement interne pour les champs de formulaire */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Styliser le titre du formulaire */
+h2 {
   text-align: center;
+  margin-bottom: 25px; /* Plus d'espace sous le titre */
+  color: #333;
+  font-size: 24px; /* Taille de la police du titre */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Rendre le formulaire responsive pour les écrans plus petits */
+@media (max-width: 768px) {
+  form {
+    padding: 20px;
+  }
+  button[type="submit"] {
+    font-size: 16px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Style pour le CV */
+.cv-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 12px; /* Coins arrondis */
+  background-color: #fff; /* Fond blanc */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre plus douce */
+}
+
+/* Style des titres */
+h1, h2 {
+  color: #333;
+}
+
+/* Style des sections */
+h2 {
+  border-bottom: 3px solid #28a745; /* Ligne sous les sous-titres */
+  padding-bottom: 5px;
+}
+
+/* Style des paragraphes */
+p {
+  line-height: 1.6; /* Hauteur de ligne améliorée */
+  margin: 12px 0; /* Marge autour des paragraphes */
+  font-size: 18px; /* Taille de la police ajustée */
+}
+
+/* Style des listes */
+ul {
+  margin: 12px 0;
+  padding-left: 20px;
+}
+
+li {
+  line-height: 1.6; /* Hauteur de ligne pour les éléments de liste */
+  font-size: 18px; /* Taille de la police des éléments de liste */
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Style de l'image de profil */
+.cv-container img {
+  border-radius: 50%;
+  border: 4px solid hsl(0, 0%, 100%); 
+  
+
+}
+.cv-container h1 {
+  border-radius: 50%;
+  position: absolute;
+  top: 70px;
+
+  padding-left: 200px;
+}
+
+/* Style du bouton de téléchargement */
+button {
+  display: inline-block;
+  margin: 30px auto 0; /* Centre le bouton horizontalement */
+  padding: 12px 25px; /* Espacement intérieur du bouton */
+  background-color: #28a745; /* Couleur verte */
+  color: white;
+  border: none;
+  border-radius: 6px; /* Coins arrondis */
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.2s; /* Animation pour le survol */
+}
+
+/* Effet de survol pour le bouton */
+button:hover {
+  background-color: #218838; /* Couleur de fond lors du survol */
+  transform: translateY(-2px); /* Effet de survol */
+}
+/* ------------------- */
+.div1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Prend toute la hauteur de la fenêtre */
+  background-color: #e9ecef; /* Couleur de fond de la page */
+}
+
+form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center; /* Centre les éléments horizontalement */
+  border: 1px solid #ccc; /* Bordure légère pour le formulaire */
+  padding: 20px;
+  border-radius: 5px; /* Coins arrondis */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Ombre pour donner du relief */
+  background-color: #f8f9fa; /* Couleur de fond du formulaire */
 }
 
-.App-link {
-  color: #61dafb;
+h2 {
+  margin-bottom: 20px; /* Espace entre le titre et le bouton */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input[type="submit"] {
+  padding: 10px 20px; /* Ajoute du padding pour un bouton plus grand */
+  background-color: #1a7404; /* Couleur de fond du bouton */
+  color: white; /* Couleur du texte */
+  border: none; /* Pas de bordure */
+  border-radius: 5px; /* Coins arrondis */
+  cursor: pointer; /* Curseur en forme de main */
+  transition: background-color 0.3s; /* Effet de transition */
+}
+
+input[type="submit"]:hover {
+  background-color: #3cb300; /* Couleur du bouton au survol */
 }
